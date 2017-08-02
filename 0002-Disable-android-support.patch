@@ -1,0 +1,29 @@
+From 1422eddacbbe4ca5614794ebb7ba8779ce2718f2 Mon Sep 17 00:00:00 2001
+From: Michael Simacek <msimacek@redhat.com>
+Date: Mon, 30 May 2016 14:24:43 +0200
+Subject: [PATCH 2/4] Disable android support
+
+---
+ core/src/main/java/org/easymock/internal/MocksControl.java | 6 ------
+ 1 file changed, 6 deletions(-)
+
+diff --git a/core/src/main/java/org/easymock/internal/MocksControl.java b/core/src/main/java/org/easymock/internal/MocksControl.java
+index 6ae65d1..d5937b0 100644
+--- a/core/src/main/java/org/easymock/internal/MocksControl.java
++++ b/core/src/main/java/org/easymock/internal/MocksControl.java
+@@ -141,12 +141,6 @@ public class MocksControl implements IMocksControl, IExpectationSetters<Object>,
+             return cached;
+         }
+ 
+-        // ///CLOVER:OFF
+-        if (AndroidSupport.isAndroid()) {
+-            return classProxyFactory = new AndroidClassProxyFactory();
+-        }
+-        // ///CLOVER:ON
+-
+         return classProxyFactory = new ClassProxyFactory();
+     }
+ 
+-- 
+2.5.5
+
