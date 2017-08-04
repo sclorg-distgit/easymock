@@ -3,7 +3,7 @@
 
 Name:           %{?scl_prefix}easymock
 Version:        3.4
-Release:        4.1%{?dist}
+Release:        4.2%{?dist}
 Summary:        Easy mock objects
 License:        ASL 2.0
 URL:            http://www.easymock.org
@@ -91,6 +91,9 @@ rm core/src/test/java/org/easymock/tests2/ClassExtensionHelperTest.java
 %license core/LICENSE.txt
 
 %changelog
+* Thu Jun 22 2017 Michael Simacek <msimacek@redhat.com> - 3.4-4.2
+- Mass rebuild 2017-06-22
+
 * Wed Jun 21 2017 Java Maintainers <java-maint@redhat.com> - 3.4-4.1
 - Automated package import and SCL-ization
 
